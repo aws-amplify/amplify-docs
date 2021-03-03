@@ -3,7 +3,19 @@
 
 ```java
 Amplify.Auth.fetchUserAttributes(
-    attributes -> Log.i("AuthDemo", "User attributes = " + attributes.toString()),
+    attributes -> {
+        Log.i("AuthDemo", "All user attributes = " + attributes.toString());
+
+        // To access a specific user attribute:
+        Map<AuthUserAttributeKey, String> attributesMap = new HashMap<>();
+        for (AuthUserAttribute attribute : attributes) {
+            attributesMap.put(attribute.getKey(), attribute.getValue());
+        }
+        String email = attributesMap.get(AuthUserAttributeKey.email());
+        if (email != null) {
+            Log.i("AuthDemo", "User email = " + email);
+        }
+    },
     error -> Log.e("AuthDemo", "Failed to fetch user attributes.", error)
 );
 ```
@@ -13,7 +25,19 @@ Amplify.Auth.fetchUserAttributes(
 
 ```kotlin
 Amplify.Auth.fetchUserAttributes(
-    { Log.i("AuthDemo", "User attributes = $it") },
+    { attributes ->
+        Log.i("AuthDemo", "All user attributes = $attributes")
+
+        // To access a specific user attribute:
+        val attributesMap: MutableMap<AuthUserAttributeKey, String> = HashMap()
+        for (attribute in attributes) {
+            attributesMap[attribute.key] = attribute.value
+        }
+        val email = attributesMap[AuthUserAttributeKey.email()]
+        if (email != null) {
+            Log.i("AuthDemo", "User email = $email")
+        }
+    }, 
     { Log.e("AuthDemo", "Failed to fetch user attributes.", $it) }
 )
 ```

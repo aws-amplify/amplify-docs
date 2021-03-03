@@ -7,7 +7,14 @@ func fetchAttributes() {
     Amplify.Auth.fetchUserAttributes() { result in
         switch result {
         case .success(let attributes):
-            print("User attributes - \(attributes)")
+            print("All user attributes - \(attributes)")
+            var attributesMap = [AuthUserAttributeKey: String]()
+            for attribute in attributes {
+                attributesMap[attribute.key] = attribute.value
+            }
+            if let email = attributesMap[.email] {
+                print("User email = \(email)")
+            }
         case .failure(let error):
             print("Fetching user attributes failed with error \(error)")
         }
