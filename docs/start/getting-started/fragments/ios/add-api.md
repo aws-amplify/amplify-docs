@@ -21,13 +21,27 @@ Now that you have DataStore persisting data locally, in the next step you'll con
     ```bash
     amplify push
     ```
-> Reply `No` when it asks for `? Do you want to generate code for your newly created GraphQL API`.
+  
+  This command will display a summary of the changes that will be pushed to your backend. It should look like this:
 
-    <amplify-callout>
+  ![](~/images/lib/getting-started/ios/amplify-push-api-summary.png)
+
+  <amplify-callout>
+
+  **Note:** If the summary doesn't contain the API category, you will need to cancel this push process and run `$ amplify add api` before continuing.
+
+  </amplify-callout>
+
+  Select the following options:
+  
+  - Are you sure you want to continue? `Yes`
+  - Do you want to generate code for your newly created GraphQL API? `No`
+
+  <amplify-callout>
     
-    **Note:** sit back and relax since this command will generate all the required cloud resources on your AWS account and it might take a while to complete.
-    
-    </amplify-callout>
+  **Note:** Sit back and relax since this command will generate all the required cloud resources on your AWS account and it might take a while to complete.
+  
+  </amplify-callout>
 
 ## Enable cloud syncing
 
