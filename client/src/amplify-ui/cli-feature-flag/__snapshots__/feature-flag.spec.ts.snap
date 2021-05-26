@@ -66,6 +66,7 @@ exports[`amplify-feature-flags Render logic should render 1`] = `
     <amplify-feature-flag-summary name="useTypesGeneratorPlugin"></amplify-feature-flag-summary>
     <amplify-feature-flag-summary name="cleanGeneratedModelsDirectory"></amplify-feature-flag-summary>
     <amplify-feature-flag-summary name="retainCaseStyle"></amplify-feature-flag-summary>
+    <amplify-feature-flag-summary name="handleListNullabilityTransparently"></amplify-feature-flag-summary>
   </div>
 </amplify-feature-flags>
 `;

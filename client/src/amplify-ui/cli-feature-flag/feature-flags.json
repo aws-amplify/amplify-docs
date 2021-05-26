@@ -335,6 +335,27 @@
             "defaultExistingProject": true
           }
         ]
+      },
+      "handleListNullabilityTransparently": {
+        "description": "Configure the nullability of the List types in Datastore Models generation",
+        "type": "Feature",
+        "valueType": "Boolean",
+        "versionAdded": "4.50.2",
+        "deprecationDate": "Nov 1st 2021",
+        "values": [
+          {
+            "value": "true",
+            "description": "[Recommended]: Respect the nullability of List types as specified in the GraphQL schema. Refer <link the library docs> for more information.",
+            "defaultNewProject": true,
+            "defaultExistingProject": false
+          },
+          {
+            "value": "false",
+            "description": "Use the nullability specification of list components to decide the nullability of List type.",
+            "defaultNewProject": false,
+            "defaultExistingProject": true
+          }
+        ]
       }
     }
   }
