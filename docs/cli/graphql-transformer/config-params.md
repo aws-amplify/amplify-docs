@@ -80,6 +80,16 @@ Follow these two steps when you need to rotate an API Key
 }
 ```
 
+## DynamoDBEnableServerSideEncryption
+
+**Override the settings to enable server-side encryption.**
+
+```
+{
+  "DynamoDBEnableServerSideEncryption": false
+}
+```
+
 ## DynamoDBModelTableReadIOPS
 
 **Override the default read IOPS provisioned for each @model table**
