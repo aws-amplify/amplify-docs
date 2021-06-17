@@ -8,11 +8,13 @@ To start adding the Amplify Libraries to your iOS project, open your project in 
 
 Enter the Amplify iOS GitHub repo URL (`https://github.com/aws-amplify/amplify-ios`) into the search bar and click **Next**.
 
-![Search for repo](~/images/project-setup/20_5_search-amplify-repo.png)
+![Search for repo](~/images/project-setup/spm-setup-03-dependency-version-options.png)
 
-You'll see the Amplify iOS repository rules for which version of Amplify you want Swift Package Manager to install. Choose the first rule, **Version**, as it will use the latest compatible version of the dependency that can be detected from the `main` branch, then click **Next**.
+You'll see the Amplify iOS repository rules for which version of Amplify you want Swift Package Manager to install. Choose the first rule, **Version**, and select Up to Next Minor as it will use the latest compatible version of the dependency that can be detected from the `main` branch, then click **Next**.
 
 ![Dependency version options](~/images/project-setup/20_6_dependency-version-options.png)
+
+NOTE: The AWS Mobile SDK for iOS does not use Semantic Versioning, and may introduce breaking API changes on minor version releases. We recommend setting your Version rule to Up to Next Minor and evaluating minor version releases to ensure they are compatible with your app.
 
 Lastly, choose which of the libraries you want added to your project. Always select the **Amplify** library. The "Plugin" to install depends on which categories you are using:
 
