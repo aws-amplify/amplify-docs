@@ -27,6 +27,20 @@ You will know the sign up flow is complete if you see the following in your cons
 Confirm signUp succeeded
 ```
 
+## Force change password
+If a user is required to change the password on the first login, CONFIRM_SIGN_IN_WITH_NEW_PASSWORD `AuthSignInStep` will be returned when `signIn` is called. A new password given by the user is needed in that case. It can be done using `confirmSignIn` with the new password.
+Implement a UI to change password on the first login. After the user enters the username and password you can start the force change password flow by calling the following method:
+
+<inline-fragment platform="ios" src="~/lib/auth/fragments/ios/signin/30_signIn.md"></inline-fragment>
+<inline-fragment platform="android" src="~/lib/auth/fragments/android/signin/25_forceChangePassword.md"></inline-fragment>
+<inline-fragment platform="flutter" src="~/lib/auth/fragments/flutter/signin/30_signIn.md"></inline-fragment>
+
+You will know the force change password flow is complete if you see the following in your console window:
+
+```console
+AuthSignInResult{isSignInComplete=true, nextStep=AuthNextSignInStep{signInStep=DONE, additionalInfo={}, codeDeliveryDetails=null}}
+```
+
 ## Sign in a user
 
 Implement a UI to get the username and password from the user. After the user enters the username and password you can start the sign in flow by calling the following method:
