@@ -7,7 +7,7 @@ For React Native, you must override properties defined in AmplifyTheme.js [here]
 ```javascript
 import { AmplifyTheme } from 'aws-amplify-react-native';
 
-const MySectionHeader = Object.assign({}, AmplifyTheme.sectionHeader, { background: 'orange' });
+const MySectionHeader = Object.assign({}, AmplifyTheme.sectionHeader, { backgroundColor: 'orange' });
 const MyTheme = Object.assign({}, AmplifyTheme, { sectionHeader: MySectionHeader });
 
 <Authenticator theme={MyTheme} />
