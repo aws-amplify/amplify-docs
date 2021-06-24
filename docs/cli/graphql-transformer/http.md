@@ -216,6 +216,25 @@ GET /DEV/posts
 Host: www.example.com
 ```
 
+**Specifying the region**
+
+The `@http` directive allows you to use `${region}` to reference the AWS region of your environment.
+
+```graphql
+type Query {
+  listPosts: Post @http(
+    url: "https://www.example.com/${region}/posts"
+  )
+}
+```
+
+which, in the `us-east-1` region, will send
+
+```
+GET /us-east-1/posts
+Host: www.example.com
+```
+
 **Combining the different components**
 
 You can use a combination of parameters, query, body, headers, and environments in your `@http` directive definition.
