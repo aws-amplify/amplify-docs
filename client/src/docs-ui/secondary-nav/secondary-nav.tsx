@@ -56,6 +56,10 @@ export class DocsSecondaryNav {
                     label: "Guides",
                     url: "/guides",
                   },
+                  {
+                    label: "Sample Apps",
+                    url: "/sample-app",
+                  },
                   ...(this.selectedFilters?.platform
                     ? [
                         {

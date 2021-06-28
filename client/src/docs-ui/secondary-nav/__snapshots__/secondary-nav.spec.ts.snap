@@ -36,6 +36,11 @@ exports[`docs-secondary-nav Render logic should render 1`] = `
               Guides
             </span>
           </docs-internal-link>
+          <docs-internal-link childactiveclass="css-pnqqcs" href="/sample-app">
+            <span>
+              Sample Apps
+            </span>
+          </docs-internal-link>
           <div class="css-1r4lk6l"></div>
         </div>
       </div>
