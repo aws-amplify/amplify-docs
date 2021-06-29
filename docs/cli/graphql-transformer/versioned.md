@@ -7,6 +7,13 @@ description: The @versioned directive adds object versioning and conflict resolu
 
 The `@versioned` directive adds object versioning and conflict resolution to a type. Do not use this directive when leveraging DataStore as the conflict detection and resolution features are automatically handled inside AppSync and are incompatible with the `@versioned` directive.
 
+<amplify-callout>
+
+Note that **@versioned** is only supported in client code generated via AppSync [codegen](~/cli/graphql-transformer/codegen).
+Versioning is not supported in models generated via `amplify codegen models`.
+
+</amplify-callout>
+
 ### Definition
 
 ```graphql
