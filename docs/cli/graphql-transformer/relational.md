@@ -1,9 +1,9 @@
 ---
 title: Relational Databases
-description: The Amplify CLI currently supports importing serverless Amazon Aurora MySQL 5.6 databases running in the us-east-1 region. Learn how to create an Amazon Aurora Serverless database, import this database as a GraphQL data source and test it.
+description: The Amplify CLI supports importing serverless Amazon Aurora MySQL 5.6 databases running in your account. Learn how to create an Amazon Aurora Serverless database, import this database as a GraphQL data source and test it.
 ---
 
-The Amplify CLI currently supports importing serverless Amazon Aurora MySQL 5.6 databases running in the us-east-1 region. The following instruction show how to create an Amazon Aurora Serverless database, import this database as a GraphQL data source and test it.
+The Amplify CLI supports importing serverless Amazon Aurora MySQL 5.6 databases running in your account. The following instruction show how to create an Amazon Aurora Serverless database, import this database as a GraphQL data source and test it.
 
 **First, if you do not have an Amplify project with a GraphQL API create one using these simple commands.**
 
@@ -67,11 +67,12 @@ CREATE TABLE Orders (
 );
 ```
 
+
 **Return to your command line and run `amplify api add-graphql-datasource` from the root of your amplify project.**
 
 ![Add GraphQL Data Source](~/images/add-graphql-datasource.png)
 
-**Push your project to AWS with `amplify push`.**
+**Push your project to AWS with** `amplify push`.
 
 Run `amplify push` to push your project to AWS. You can then open the AppSync console with `amplify api console`, to try interacting with your RDS database via your GraphQL API.
 
