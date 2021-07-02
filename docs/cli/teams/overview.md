@@ -50,7 +50,7 @@ $ git remote add origin git@github.com:<repo-name>
 $ git push -u origin prod
 ```
 
-**Note:** When you initialize a project using the Amplify CLI, it appends (if a gitignore file exists at the root of the project) or creates one for you (if a gitignore file doesn't exist at the root of your project), with a list of recommended files to check in from the Amplify CLI generated list of files, into your Git repository.
+**Note:** When you initialize a project using the Amplify CLI, it appends (if a gitignore file exists at the root of the project) or creates one for you (if a gitignore file doesn't exist at the root of your project), with a list of recommended files to check in from the Amplify CLI generated list of files, into your Git repository. Amplify CLI will continue to manage the section of your .gitignore between the `amplify-do-not-edit-begin` and `#amplify-do-not-edit-end` pragmas.
 
 Once you have your 'prod' branch setup in Git, set up a 'dev' environment in your Amplify project (which would be based on your 'prod' environment), and then walk through the following steps to create a corresponding git branch for it.
 
