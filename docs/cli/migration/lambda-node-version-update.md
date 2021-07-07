@@ -71,3 +71,13 @@ const response = require('./cfn-response');
 ### runtime string replacement
 
 With the latest version of the Amplify CLI (> 4.7.0), when you execute any `amplify` command on a project initialized by CLI version prior to 4.7.0, it will prompt for your confirmation to automatically upgrade your NodeJS Lambda runtime versions, from `nodejs8.10` to `nodejs10.x` in all the CloudFormation template files under the `amplify/backend` folder. If you do not confirm, you will need to manually carry out such replacements. You can go to each category subdirectory, then each resource subdirectory under it, and locate the template file (it could be either `.yml` or `.json` file), the template file has `template` in its name. Then do a global string replacement of `nodejs8.10` to `nodejs10.x` in the file.
+
+## Node.js 10.x to Node.js latest version supported by AWS
+According to AWS Lambda [Runtime Support Policy](https://docs.aws.amazon.com/lambda/latest/dg/runtime-support-policy.html), AWS Lambda deprecates Node.js runtime Node.js 10.x on August 30th, 2021.
+
+The Amplify CLI code base has been updated to reflect this change. Amplify CLI replaces Node.js 10.x with Node.js latest version for all files that it creates for you. Migration will be done automatically by running `amplify push` command, this will prompt users to migrate from Node.js 10.x to latest Node.js runtimes as supported by AWS.List of changes are summarized below: 
+- Change default project version to 3.1
+- Change minimum node version to 12 for CLI and amplify-app
+- Lambda functions and triggers will use 14.x by default
+- Any functions/triggers/custom resource handlers using nodes.js <10.x will be migrated to 12.x(Cloudformation Custom Resource handlers does not support 14.x.)
+- Enhance project version handling for migration and node migration scenarios
