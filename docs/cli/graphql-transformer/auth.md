@@ -200,8 +200,7 @@ type Draft @model
 ### Ownership with create mutations
 
 The ownership authorization rule will automatically fill ownership fields unless
-told explicitly not to do so. To show how this works, lets look at how the create mutation
-would work for the **Draft** type above:
+told explicitly not to do so. To show how this works, lets look at how the create mutation would work for the **Draft** type above:
 
 ```graphql
 mutation CreateDraft {
@@ -223,50 +222,15 @@ Let's assume that when I call this mutation I am logged in as `someuser@my-domai
             "id": "...",
             "title": "A new draft",
             "owner": "someuser@my-domain.com",
-            "editors": ["someuser@my-domain.com"]
+            "editors": null
         }
     }
 }
 ```
 
-The `Mutation.createDraft` resolver is smart enough to match your auth rules to attributes
-and will fill them in be default. If you do not want the value to be automatically set all
-you need to do is include a value for it in your input.
+The `Mutation.createDraft` resolver is smart enough to match your auth rules to attributes and will fill them in by default.
 
-For example, to have the resolver automatically set the **owner** but not the **editors**, you would run this:
-
-```graphql
-mutation CreateDraft {
-  createDraft(
-    input: {
-      title: "A new draft",
-      editors: []
-    }
-  ) {
-    id
-    title
-    owner
-    editors
-  }
-}
-```
-
-This would return:
-
-```json
-{
-    "data": {
-        "createDraft": {
-            "id": "...",
-            "title": "A new draft",
-            "owner": "someuser@my-domain.com",
-            "editors": []
-        }
-    }
-}
-```
-
-To specify a list of custom **editors**, you could run this:
+To specify a list of **editors**, you could run this:
 
 ```graphql
 mutation CreateDraft {
@@ -299,7 +263,7 @@ This would return:
 }
 ```
 
-You can try to perform the same modification to **owner** but this will throw an **Unauthorized** exception because you are no longer the owner of the object you are trying to create.
+You can try to perform a modification to **owner** but this will throw an **Unauthorized** exception because you are no longer the owner of the object you are trying to create.
 
 ```graphql
 mutation CreateDraft {
