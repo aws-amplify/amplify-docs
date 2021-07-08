@@ -111,8 +111,8 @@ import { I18n } from 'aws-amplify';
 
 const authScreenLabels = {
     en: {
-        'Sign Up': 'Create new account',
-        'Sign Up Account': 'Create a new account'
+        'Create account': 'Create new account',
+        'Create a new account': 'Create a new account'
     }
 };
 
@@ -120,6 +120,7 @@ I18n.setLanguage('en');
 I18n.putVocabularies(authScreenLabels);
 ```
 
+For full list of available labels refer to [Translations](https://github.com/aws-amplify/amplify-js/blob/main/packages/amplify-ui-components/src/common/Translations.ts)
 
 ### Customize Initial authState
 
