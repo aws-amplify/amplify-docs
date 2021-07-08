@@ -1,6 +1,7 @@
 {
   "title": "Hosting",
   "items": [
-    "hosting"
+    "hosting",
+    "with-aws-exports"
   ]
 }
