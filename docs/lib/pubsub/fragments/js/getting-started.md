@@ -52,7 +52,7 @@ You can retrieve the `Cognito Identity Id` of a logged in user with Auth Module:
 Then, you need to send your *Cognito Identity Id* to the AWS backend and attach `myIoTPolicy`. You can do this with the following [AWS CLI](https://aws.amazon.com/cli/) command:
 
 ```bash
-aws iot attach-principal-policy --policy-name 'myIoTPolicy' --principal '<YOUR_COGNITO_IDENTITY_ID>'
+aws iot attach-policy --policy-name 'myIoTPolicy' --target '<YOUR_COGNITO_IDENTITY_ID>'
 ```
 
 ### Step 3: Allow the Amazon Cognito Authenticated Role to access IoT Services
