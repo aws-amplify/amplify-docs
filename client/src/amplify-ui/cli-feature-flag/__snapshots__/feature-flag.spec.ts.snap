@@ -27,6 +27,7 @@ exports[`amplify-feature-flags Render logic should render 1`] = `
     <amplify-feature-flag-summary name="useExperimentalPipelinedTransformer"></amplify-feature-flag-summary>
     <amplify-feature-flag-summary name="enableIterativeGsiUpdates"></amplify-feature-flag-summary>
     <amplify-feature-flag-summary name="secondaryKeyAsGSI"></amplify-feature-flag-summary>
+    <amplify-feature-flag-summary name="skipOverrideMutationInputTypes"></amplify-feature-flag-summary>
   </div>
   <div>
     <docs-in-page-link targetid="frontend-ios">

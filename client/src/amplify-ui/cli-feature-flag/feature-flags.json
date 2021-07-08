@@ -131,6 +131,27 @@
             "defaultExistingProject": true
           }
         ]
+      },
+      "skipOverrideMutationInputTypes": {
+        "description": "Skip updating input types when mutation is null and @key is present.",
+        "type": "Feature",
+        "valueType": "Boolean",
+        "versionAdded": "4.41.3",
+        "deprecationDate": "May 1st 2021",
+        "values": [
+          {
+            "value": "true",
+            "description": "Skip overwrites user defined inputs when mutation is null in original schema.",
+            "defaultNewProject": true,
+            "defaultExistingProject": false
+          },
+          {
+            "value": "false",
+            "description": "Overwrites user defined inputs when mutation is null in original schema.",
+            "defaultNewProject": false,
+            "defaultExistingProject": true
+          }
+        ]
       }
     }
   },
