@@ -99,7 +99,7 @@ Add a command to the `scripts` in your `package.json` that updates your layer wi
 ```json
 {
   "scripts": {
-    "updateAppsyncOperations": "amplify codegen && babel src/graphql --config-file ./babel.config.json -d ./amplify/backend/function/appsyncOperations/opt/graphql/"
+    "updateAppsyncOperations": "amplify codegen && babel src/graphql --config-file ./babel.config.json -d ./amplify/backend/function/appsyncOperations/opt/graphql/ --extensions .ts,.tsx"
   }
 }
 ```
