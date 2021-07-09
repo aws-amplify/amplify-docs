@@ -15,9 +15,14 @@ private GraphQLRequest<String> getPostAndTodo(String postId, String todoId) {
             + "name "
         + "} "
     + "}";
+  
+    Map<String, Object> parameters = new HashMap<>();
+    parameters.put("postId", postId);
+    parameters.put("todoId", todoId);
+
     return new SimpleGraphQLRequest<>(
             document, 
-            Collections.singletonMap("id", id), 
+            parameters, 
             Post.class, 
             new GsonVariablesSerializer());
 }
