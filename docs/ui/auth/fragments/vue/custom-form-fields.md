@@ -4,7 +4,7 @@
     <amplify-sign-up
       slot="sign-up"
       username-alias="email"
-      :form-fields.prop="formFields"
+      :formFields.prop="formFields"
     ></amplify-sign-up>
     <amplify-sign-in slot="sign-in" username-alias="email"></amplify-sign-in>
   </amplify-authenticator>
