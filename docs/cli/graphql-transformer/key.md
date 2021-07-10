@@ -9,7 +9,7 @@ The `@key` directive makes it simple to configure custom index structures for `@
 
 Amazon DynamoDB is a key-value and document database that delivers single-digit millisecond performance at any scale but making it work for your access patterns requires a bit of forethought. DynamoDB query operations may use at most two attributes to efficiently query data. The first query argument passed to a query (the hash key) must use strict equality and the second attribute (the sort key) may use gt, ge, lt, le, eq, beginsWith, and between. DynamoDB can effectively implement a wide variety of access patterns that are powerful enough for the majority of applications.
 
-When modeling your data during schema design there are common patterns that you may need to leverage. [We provide a fully working schema with 17 patterns related to relational designs](~/cli/graphql-transformer/dataaccess.md).
+When modeling your data during schema design, there are common patterns that you may need to leverage. [We provide a fully working schema with 17 patterns related to relational designs](~/cli/graphql-transformer/dataaccess.md).
 
 ## Definition
 
