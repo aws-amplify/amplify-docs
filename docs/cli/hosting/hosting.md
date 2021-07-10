@@ -84,4 +84,6 @@ Configures the S3 bucket for static web hosting. You can set the index doc and e
 - `CloudFront`<br/>
 Configures the CloudFront content delivery network (CDN). You can configure TTLs (Time To Live) for the default cache behavior, and configure custom error responses.<br/><br/>
 - `Publish`<br/>
-Configures the publish ignore patterns (similar to a .gitignore file in your git based project) for the publish command. The publish command will ignore these set of directories and files in the distribution folder that have names matching the patterns.
+Configures the publish ignore patterns (similar to a .gitignore file in your git based project) for the publish command. The publish command will ignore these set of directories and files in the distribution folder that have names matching the patterns.<br/><br/>
+- `Metadata`<br/>
+Configures the patterns and metadata key/values for the publish command. The publish command will include the key/value in S3 for these sets of directories and files in the distribution folder that have names matching the patterns. The following keys are recognized as S3 System Parameters -  ContentType, CacheControl, ContentDisposition, ContentEncoding, ContentLanguage, Expires, WebsiteRedirectLocation. All other keys are added as S3 metadata.
