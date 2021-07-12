@@ -120,21 +120,26 @@ It is consumed by the [iOS](https://github.com/aws/aws-sdk-ios/) and [Android](h
 When a new project is initialized from the Amplify CLI, Amplify will append the following to the .gitignore file in the root directory. A .gitignore file will be created if one does not exist.
 
 ```text
-#amplify
+#amplify-do-not-edit-begin
 amplify/\#current-cloud-backend
 amplify/.config/local-*
+amplify/logs
 amplify/mock-data
 amplify/backend/amplify-meta.json
 amplify/backend/awscloudformation
+amplify/backend/.temp
 build/
 dist/
 node_modules/
 aws-exports.js
 awsconfiguration.json
 amplifyconfiguration.json
+amplifyconfiguration.dart
 amplify-build-config.json
 amplify-gradle-config.json
 amplifytools.xcconfig
+.secret-*
+#amplify-do-not-edit-end
 ```
 
 ### team-provider-info.json
