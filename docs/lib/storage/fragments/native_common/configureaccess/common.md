@@ -45,3 +45,7 @@ For the user to read the file, specify the same access level (`private`) and key
 <inline-fragment platform="ios" src="~/lib/storage/fragments/ios/configureaccess/40_private_download.md"></inline-fragment>
 <inline-fragment platform="android" src="~/lib/storage/fragments/android/configureaccess/40_private_download.md"></inline-fragment>
 <inline-fragment platform="flutter" src="~/lib/storage/fragments/flutter/configureaccess/40_private_download.md"></inline-fragment>
+
+<inline-fragment platform="ios" src="~/lib/storage/fragments/native_common/configureaccess/customization.md"></inline-fragment>
+<inline-fragment platform="android" src="~/lib/storage/fragments/native_common/configureaccess/customization.md"></inline-fragment>
+<inline-fragment platform="flutter" src="~/lib/storage/fragments/native_common/configureaccess/customization.md"></inline-fragment>

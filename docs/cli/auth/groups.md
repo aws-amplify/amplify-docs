@@ -89,3 +89,52 @@ The above example uses a combination of permissions where users in the "Admins" 
   }
 ]
 ```
+
+If you would like users in the Editors group access to their own key path:
+```json
+[
+  {
+    "groupName": "Editors",
+    "precedence": 2,
+    "customPolicies": [
+      {
+        "PolicyName": "Editors-Protected-Group-Policy",
+        "PolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Sid": "EditorsProtectedGroup",
+              "Effect": "Allow",
+              "Action": [
+                "s3:PutObject",
+                "s3:GetObject",
+                "s3:DeleteObject"
+              ],
+              "Resource": ["arn:aws:s3:::your-s3-bucket/editorGroup/*"]
+            },
+            {
+              "Condition": {
+                  "StringLike": {
+                      "s3:prefix": [
+                          "editorGroup/",
+                          "editorGroup/*"
+                      ]
+                  }
+              },
+              "Action": [
+                  "s3:ListBucket"
+              ],
+              "Resource": [
+                  "arn:aws:s3:::your-s3-bucket"
+              ],
+              "Effect": "Allow"
+            }
+          ]
+        }
+      }
+    ]
+  }
+]
+```
+
+Cognito users in the Editors group will have access to perform all storage operations for keys under the `editorGroup` path. To perform operations using the Amplify library, see [Customize based on Cognito user pool groups](~/lib/storage/configureaccess.md#customize-based-on-cognito-user-pool-groups) for more details.
