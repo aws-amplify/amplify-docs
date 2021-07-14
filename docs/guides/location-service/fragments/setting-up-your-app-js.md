@@ -39,6 +39,25 @@ The first step to using the SDKs in the client is to install the necessary depen
 npm install aws-sdk aws-amplify
 ```
 
+## Initializing an Amplify Project 
+
+Initialize a new Amplify project by running the following command from the root directory of your app:
+
+```bash
+amplify init
+
+? Enter a name for the project: amazonlocationservice
+? Enter a name for the environment: dev
+? Choose your default editor: Visual Studio Code
+? Choose the type of app that you're building: javascript
+? What javascript framework are you using: react
+? Source Directory Path:  src
+? Distribution Directory Path: build
+? Build Command:  npm run-script build
+? Start Command: npm run-script start
+? Do you want to use an AWS profile? No
+```
+
 ## Adding authentication
 
 The next feature you will be adding to your React app is authentication. The Amplify Framework uses [Amazon Cognito](https://aws.amazon.com/cognito/) as the main authentication provider. Amazon Cognito is a robust user directory service that handles user registration, authentication, account recovery & other operations. 
