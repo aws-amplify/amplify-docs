@@ -69,7 +69,7 @@ Finally, open __App.js__ (Expo) or __index.js__ (React Native CLI) and add the f
 
 ```javascript
 import Amplify from 'aws-amplify'
-import config from './aws-exports'
+import config from './src/aws-exports'
 Amplify.configure(config)
 ```
 
