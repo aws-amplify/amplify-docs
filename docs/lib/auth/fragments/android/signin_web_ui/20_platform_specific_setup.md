@@ -16,6 +16,17 @@ your redirect URI prefix if necessary:
     </intent-filter>
 </activity>
 ```
+  
+If your app is targeting API level 30 or above, add the following queries section on the top level to `AndroidManifest.xml`.
+
+```xml
+<queries>
+    <intent>
+        <action android:name=
+            "android.support.customtabs.action.CustomTabsService" />
+    </intent>
+</queries>
+```
 
 You may now skip the instructions below for adding a response handler to your activity.
 
