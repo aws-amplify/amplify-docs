@@ -454,6 +454,7 @@ cat myAddApiRequest.json | jq -c | amplify add api --headless
 The commands that currently support this method of supplying headless parameters are:
 
 - `amplify add auth --headless`
+- `amplify import auth --headless`
 - `amplify update auth --headless`
 - `amplify add api --headless`
 - `amplify update api --headless`
@@ -463,6 +464,7 @@ The commands that currently support this method of supplying headless parameters
 The structure of the JSON objects supplied on `stdin` are defined in [amplify-headless-interface](https://www.npmjs.com/package/amplify-headless-interface). This package contains both JSON Schema and TypeScript definitions for:
 
 - [Add Auth Payload](https://github.com/aws-amplify/amplify-cli/blob/master/packages/amplify-headless-interface/src/interface/auth/add.ts)
+- [Import Auth Payload](https://github.com/aws-amplify/amplify-cli/blob/master/packages/amplify-headless-interface/src/interface/auth/import.ts)
 - [Update Auth Payload](https://github.com/aws-amplify/amplify-cli/blob/master/packages/amplify-headless-interface/src/interface/auth/update.ts)
 - [Add API Payload](https://github.com/aws-amplify/amplify-cli/blob/master/packages/amplify-headless-interface/src/interface/api/add.ts)
 - [Update API Payload](https://github.com/aws-amplify/amplify-cli/blob/master/packages/amplify-headless-interface/src/interface/api/update.ts)
@@ -486,6 +488,12 @@ In Visual Studio Code add the following to `settings.json` under the `json.schem
       "*.updateauth.json"
     ],
     "url": "./node_modules/amplify-headless-interface/schemas/auth/1/UpdateAuthRequest.schema.json"
+  },
+  {
+    "fileMatch": [
+      "*.importauth.json"
+    ],
+    "url": "./node_modules/amplify-headless-interface/schemas/auth/1/ImportAuthRequest.schema.json"
   },
   {
     "fileMatch": [
