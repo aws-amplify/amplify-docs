@@ -57,6 +57,19 @@ To deploy a static app, add the `export` script to the existing `build` script:
 ```
 The build script `next build && next export` indicates that the app supports SSG pages only.`next export` allows you to export your app to static HTML, which can be run standalone without the need of a Node.js server.
 
+At last, change to eslint rule to update **.eslintrc** file. When you build a Next.js project, you will have an error since Next.js restrict an user to use `img` as `@next/next/no-img-element` eslint rule.
+
+To build successfully, append the ignore rule to the existing `.eslintrc` below `extends` block:
+
+```json
+{
+  "extends": ["next", "next/core-web-vitals"],
+  "rules": {
+    "@next/next/no-img-element": "off"
+  }
+}
+```
+
 ### Adding Amplify hosting
 
 Initialize a new Amplify project. The `Distribution Directory Path` depends on whether you are deploying a static or SSR app. For a static app, set the `Distribution Directory Path` to `out`.
