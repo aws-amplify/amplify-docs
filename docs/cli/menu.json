@@ -6,6 +6,7 @@
     "auth",
     "storage",
     "function",
+    "geo",
     "hosting",
     "plugins",
     "teams",
