@@ -2,6 +2,7 @@
   "title": "Migration & Backwards Compatibility",
   "items": [
     "lambda-node-version-update",
-    "lambda-layers-update"
+    "lambda-layers-update",
+    "list-nullability"
   ]
 }
