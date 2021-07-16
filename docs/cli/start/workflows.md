@@ -57,6 +57,14 @@ Once you have made your category updates, run the command `amplify push` to upda
 
 The `amplify pull` command operates similar to a *git pull*, fetching upstream backend environment definition changes from the cloud and updating the local environment to match that definition. The command is particularly helpful in team scenarios when multiple team members are editing the same backend, pulling a backend into a new project, or when connecting to [multiple frontend projects](~/cli/teams/multi-frontend.md) that share the same Amplify backend environment.
 
+This command can accept two parameters `appId` and `envName`.
+`amplify pull --appId xxxx --envName xxxx`
+
+If you try to pull from an app different to what you are working on the CLI will complain.
+`Amplify appId mismatch.
+You are currently working in the amplify project with Id xxxx`
+If you still want to proceed you need to delete the `amplify` folder.
+
 ### amplify console
 
 The `amplify console` command launches the browser directing you to your cloud project in the AWS Amplify Console. The Amplify Console provides a central location for development teams to view and manage their backend environments, status of the backend deployment, deep-links to the backend resources by Amplify category, and instructions on how to pull, clone, update, or delete environments.
