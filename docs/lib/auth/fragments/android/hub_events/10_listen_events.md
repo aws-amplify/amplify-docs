@@ -20,7 +20,7 @@ Amplify.Hub.subscribe(HubChannel.AUTH,
                       Log.i("AuthQuickstart", "Auth session just expired.");
                       break;
                   default:
-                      Log.w("AuthQuickstart", "Unhandled Auth Event: " + AuthChannelEventName.valueOf(hubEvent.getName()));
+                      Log.i("AuthQuickstart", "Unhandled Auth Event: " + AuthChannelEventName.valueOf(hubEvent.getName()));
                       break;
               }
           }
@@ -46,7 +46,7 @@ Amplify.Hub.subscribe(HubChannel.AUTH) { event ->
             AuthChannelEventName.SESSION_EXPIRED ->
                 Log.i("AuthQuickstart", "Auth session just expired")
             else ->
-                Log.w("AuthQuickstart", "Unhandled Auth Event: ${event.name}")
+                Log.i("AuthQuickstart", "Unhandled Auth Event: ${event.name}")
         }
     }
 }
@@ -78,8 +78,8 @@ Amplify.Hub.subscribe(HubChannel.AUTH).collect {
 <amplify-block name="RxJava">
 
 ```java
-RxAmplify.Hub.on(HubChannel.Auth)
-    .map(hubEvent::getName)
+RxAmplify.Hub.on(HubChannel.AUTH)
+    .map(HubEvent::getName)
     .subscribe(name -> {
         if (name.equals(InitializationStatus.SUCCEEDED.toString())) {
             Log.i("AuthQuickstart", "Auth successfully initialized");
@@ -99,7 +99,7 @@ RxAmplify.Hub.on(HubChannel.Auth)
                 Log.i("AuthQuickstart", "Auth session just expired.");
                 break;
             default:
-                Log.w("AuthQuickstart", "Unhandled Auth Event: " + AuthChannelEventName.valueOf(name));
+                Log.i("AuthQuickstart", "Unhandled Auth Event: " + AuthChannelEventName.valueOf(name));
                 break;
         }
     });

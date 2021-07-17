@@ -17,6 +17,7 @@
     "social_signin_web_ui",
     "sms_flows",
     "signin_next_steps",
+    "check_authentication_state",
     "guest_access",
     "auth-events",
     "user-attributes",

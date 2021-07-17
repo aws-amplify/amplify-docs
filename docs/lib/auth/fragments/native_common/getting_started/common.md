@@ -55,7 +55,7 @@ We can now check the current auth session.
 <inline-fragment platform="ios" src="~/lib/auth/fragments/ios/getting_started/40_fetchSession.md"></inline-fragment>
 <inline-fragment platform="android" src="~/lib/auth/fragments/android/getting_started/40_fetchSession.md"></inline-fragment>
 
-The isSignedIn property of the authSession will be false since we haven't signed in to the category yet.
+The `isSignedIn` property of the authSession will be false since we haven't signed in to the category yet.
 
 ## Next Steps
 Congratulations! You've successfully setup AWS Cognito Auth plugin.  Check out the following links to see other Amplify Auth use cases:
