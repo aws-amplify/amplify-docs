@@ -4,6 +4,8 @@ Add API by adding these libraries into the `dependencies` block:
 ```groovy
 dependencies {
     implementation 'com.amplifyframework:aws-api:1.18.0'
+    implementation 'com.amplifyframework:aws-auth-cognito:1.18.0'
+
 }
 ```
 

@@ -18,8 +18,9 @@ public class MyAmplifyApp extends Application {
         super.onCreate();
 
         try {
-            // Add this line to add the AWSApiPlugin plugin
+            // Add these lines to add the AWSApiPlugin and Auth plugin
             Amplify.addPlugin(new AWSApiPlugin());
+            Amplify.addPlugin(AWSCognitoAuthPlugin());
             Amplify.configure(getApplicationContext());
 
             Log.i("MyAmplifyApp", "Initialized Amplify.");
@@ -35,6 +36,7 @@ public class MyAmplifyApp extends Application {
 
 ```kotlin
 Amplify.addPlugin(AWSApiPlugin())
+Amplify.addPlugin(AWSCognitoAuthPlugin())
 ```
 
 Your class will look like this:
@@ -45,8 +47,9 @@ class MyAmplifyApp : Application() {
         super.onCreate()
 
         try {
-            // Add this line to add the AWSApiPlugin plugin
+            // Add these lines to add the AWSApiPlugin and Auth plugin
             Amplify.addPlugin(AWSApiPlugin())
+            Amplify.addPlugin(AWSCognitoAuthPlugin())
             Amplify.configure(applicationContext)
 
             Log.i("MyAmplifyApp", "Initialized Amplify.")
@@ -73,8 +76,9 @@ public class MyAmplifyApp extends Application {
         super.onCreate();
 
         try {
-            // Add this line to add the AWSApiPlugin plugin
+            // Add these lines to add the AWSApiPlugin and Auth plugin
             RxAmplify.addPlugin(new AWSApiPlugin());
+            RxAmplify.addPlugin(AWSCognitoAuthPlugin());
             RxAmplify.configure(getApplicationContext());
 
             Log.i("MyAmplifyApp", "Initialized Amplify.");
